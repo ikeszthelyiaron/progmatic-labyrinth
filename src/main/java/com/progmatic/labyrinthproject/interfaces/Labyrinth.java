@@ -5,6 +5,7 @@ import com.progmatic.labyrinthproject.enums.CellType;
 import com.progmatic.labyrinthproject.enums.Direction;
 import com.progmatic.labyrinthproject.exceptions.CellException;
 import com.progmatic.labyrinthproject.exceptions.InvalidMoveException;
+import java.io.FileNotFoundException;
 import java.util.List;
 
 /**
@@ -30,7 +31,7 @@ public interface Labyrinth {
      * Should also set the player's position to the START cell. 
      * @param fileName the exact path and name of the file to load.
      */
-    void loadLabyrinthFile(String fileName);
+    void loadLabyrinthFile(String fileName) throws CellException, FileNotFoundException;
     
     /**
      * Returns the Cell's content at c.row, c.col

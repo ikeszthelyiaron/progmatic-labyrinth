@@ -1,5 +1,6 @@
 package com.progmatic.labyrinthproject.interfaces;
 
+import com.progmatic.labyrinthproject.Coordinate;
 import com.progmatic.labyrinthproject.enums.Direction;
 
 /**
@@ -7,6 +8,7 @@ import com.progmatic.labyrinthproject.enums.Direction;
  * @author pappgergely
  */
 public interface Player {
+
     
     /**
      * Returns the player's next move.
@@ -16,5 +18,13 @@ public interface Player {
      * If the player has arrived on the END cell, it should return null.
      */
     Direction nextMove(Labyrinth l);
+    public Coordinate position();
+    
+    
+    
+    
+    public void SetPosition(Coordinate c);
+    
+    public Coordinate GetPosition();
 
 }

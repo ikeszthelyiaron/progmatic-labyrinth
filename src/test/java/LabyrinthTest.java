@@ -5,6 +5,7 @@
  */
 
 import com.progmatic.labyrinthproject.Coordinate;
+import com.progmatic.labyrinthproject.LabyrinthImpl;
 import com.progmatic.labyrinthproject.enums.CellType;
 import com.progmatic.labyrinthproject.enums.Direction;
 import com.progmatic.labyrinthproject.exceptions.CellException;
@@ -24,7 +25,7 @@ import static org.junit.Assert.*;
  */
 public class LabyrinthTest {
     
-    public LabyrinthTest() {
+    public LabyrinthTest()  {
     }
     
     @BeforeClass
@@ -220,12 +221,15 @@ public class LabyrinthTest {
     
     @Test
     public void testLoadFile() throws Exception {
+        
+        
         String[][] lArr = {
             {"#", "#", "#", "#", "#"},
             {"S", " ", "#", " ", "E"},
             {"#", " ", "#", " ", "#"},
             {"#", " ", " ", " ", "#"},
             {"#", "#", "#", "#", "#"}};
+
         Labyrinth lSample = fromString(lArr);
         Labyrinth l = getLabyrinthImpl();
         l.loadLabyrinthFile("labyrinth1.txt");
@@ -382,7 +386,11 @@ public class LabyrinthTest {
     
     // TODO
     private Labyrinth getLabyrinthImpl() {
-        return null;
+        
+        LabyrinthImpl labyrinthImpl = new LabyrinthImpl();
+        
+        
+        return labyrinthImpl;
     }
     
     // TODO

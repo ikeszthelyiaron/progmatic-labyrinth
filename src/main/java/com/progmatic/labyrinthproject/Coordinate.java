@@ -1,5 +1,7 @@
 package com.progmatic.labyrinthproject;
 
+import com.progmatic.labyrinthproject.enums.CellType;
+
 /**
  * A simple immutable class for encapsulating a row and a column index.
  * 
@@ -8,6 +10,15 @@ package com.progmatic.labyrinthproject;
 public class Coordinate {
     
     private final int row, col;
+    public CellType ct;
+
+    public void setCt(CellType ct) {
+        this.ct = ct;
+    }
+
+    public CellType getCt() {
+        return this.ct;
+    }
 
     public Coordinate(int col, int row) {
         this.row = row;
